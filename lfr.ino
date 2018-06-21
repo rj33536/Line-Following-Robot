@@ -1,12 +1,12 @@
-#define ls A2
+#define ls A2 //left sensor
 
-#define rs A5
+#define rs A5 //right sensor
 
-int rm2=3,rm1=2,lm2=5,lm1=4,v =132  ;
+int rm2=3,rm1=2,lm2=5,lm1=4,v =132  ;//motors and velocity 
 
 void setup() 
 {
-
+//setting pinmodes
 pinMode(lm1,OUTPUT);
 
 pinMode(lm2,OUTPUT);
@@ -30,7 +30,7 @@ pinMode(rs,INPUT);
 pinMode(10,INPUT);
 
 pinMode(9,OUTPUT);
-
+//powering the infrared proximity sensors
 digitalWrite(A1,LOW);
 
 digitalWrite(A0,HIGH);
@@ -38,7 +38,7 @@ digitalWrite(A0,HIGH);
 digitalWrite(A4,LOW);
 
 digitalWrite(A3,HIGH);
-
+//starting the serial communication
 Serial.begin(9600);
 
 }
@@ -106,9 +106,7 @@ analogWrite(10,v);
 }
 
 else
-
 {
-
 digitalWrite(lm1,HIGH);
 
 digitalWrite(lm2,LOW);
